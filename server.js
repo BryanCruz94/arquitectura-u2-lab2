@@ -36,8 +36,12 @@ app.use('/graphql',
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-
-    console.log(`Servidor ejecutándose en puerto ${PORT}`);
-
-});
+sequelize.sync()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Servidor ejecutándose en puerto ${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.log(error);
+    });
