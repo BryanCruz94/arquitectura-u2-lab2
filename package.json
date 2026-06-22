@@ -2,14 +2,18 @@
   "name": "graphql-peliculas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": "20.18.0"
+  },
   "dependencies": {
     "express": "^5.2.1",
     "express-graphql": "^0.12.0",
